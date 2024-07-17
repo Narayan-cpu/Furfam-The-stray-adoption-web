@@ -20,9 +20,7 @@
             <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
           </li>
 
-          <li class="nav-item active">
-            <a class="nav-link" href="{% url 'adopt' %}">Adopt</a>
-          </li>
+          <li class="nav-item"><a class="nav-link" href="{% url 'adopt_list' %}">Adopt me</a></li>
           <li class="nav-item active">
             <a class="nav-link" href="{% url 'helpline' %}">Helpline</a>
           </li>
@@ -32,9 +30,8 @@
           <li class="nav-item active">
             <a class="nav-link" href="{% url 'add_blog_post' %}">Add Blog</a>
             </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="{% url 'docs' %}">Documentation</a>
-            </li>
+        
+           
         </ul>
       </div>
     </div>
@@ -51,81 +48,123 @@
      {% block body %}{% endblock body %}
  
      <section>
+      <style>
+        .site-footer {
+    background-color: #f2f2f2;
+    padding: 20px 0;
+}
+
+.container3 {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footer-content h3 {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.footer-contact p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.footer-social ul {
+    display: flex;
+    padding: 0;
+}
+
+.footer-social ul li {
+    margin-right: 10px;
+}
+
+.footer-social ul li a {
+    color: #666;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.footer-social ul li a:hover {
+    color: #000;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #666;
+}
+
+.quick-links ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.quick-links ul li a {
+    color: #666;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.quick-links ul li a:hover {
+    color: #000;
+}
+
+      </style>
       <footer class="text-center bg-body-tertiary">
-        <!-- Grid container -->
-        <div class="container pt-0">
-          <!-- Section: Social media -->
-          <section class="mb-4">
-            <!-- Facebook -->
-            <a
-              data-mdb-ripple-init
-              class="btn btn-link btn-floating btn-lg text-body m-1"
-              href="#!"
-              role="button"
-              data-mdb-ripple-color="dark"
-              ><i class="fab fa-facebook-f"></i
-            ></a>
-      
-            <!-- Twitter -->
-            <a
-              data-mdb-ripple-init
-              class="btn btn-link btn-floating btn-lg text-body m-1"
-              href="#!"
-              role="button"
-              data-mdb-ripple-color="dark"
-              ><i class="fab fa-twitter"></i
-            ></a>
-      
-            <!-- Google -->
-            <a
-              data-mdb-ripple-init
-              class="btn btn-link btn-floating btn-lg text-body m-1"
-              href="#!"
-              role="button"
-              data-mdb-ripple-color="dark"
-              ><i class="fab fa-google"></i
-            ></a>
-      
-            <!-- Instagram -->
-            <a
-              data-mdb-ripple-init
-              class="btn btn-link btn-floating btn-lg text-body m-1"
-              href="#!"
-              role="button"
-              data-mdb-ripple-color="dark"
-              ><i class="fab fa-instagram"></i
-            ></a>
-      
-            <!-- Linkedin -->
-            <a
-              data-mdb-ripple-init
-              class="btn btn-link btn-floating btn-lg text-body m-1"
-              href="#!"
-              role="button"
-              data-mdb-ripple-color="dark"
-              ><i class="fab fa-linkedin"></i
-            ></a>
-            <!-- Github -->
-            <a
-              data-mdb-ripple-init
-              class="btn btn-link btn-floating btn-lg text-body m-1"
-              href="#!"
-              role="button"
-              data-mdb-ripple-color="dark"
-              ><i class="fab fa-github"></i
-            ></a>
-          </section>
-          <!-- Section: Social media -->
-        </div>
-        <!-- Grid container -->
-      
-        <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
-          © 2020 Copyright:
-          <a class="text-body" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-        </div>
-        <!-- Copyright -->
+        <div class="container3">
+          <div class="footer-content">
+              <div class="footer-contact">
+                  <h3>Contact Us</h3>
+                  <p>Email: contact@furfam.com</p>
+                  <p>Phone: +123 9904930292</p>
+                  <p>633 down street, Bangluru, India</p>
+              </div>
+              <div class="footer-social">
+                  <h3>Follow Us</h3>
+                  <ul>
+                      <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                      <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                      <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                      <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="footer-bottom">
+              <div class="copyright">
+                  <p>&copy; 2024 FurFam. All rights reserved.</p>
+              </div>
+              <div class="quick-links">
+                  <ul>
+                      <li><a href="#">Privacy Policy</a></li>
+                      <li><a href="#">Terms of Service</a></li>
+                      <li><a href="#">Site Map</a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
       </footer>
+      
+        <!-- Copyright -->
+   
       <script>
         import { Ripple, initMDB } from "mdb-ui-kit";
 

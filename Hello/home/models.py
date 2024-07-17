@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.conf import settings
 # Create your models here.
 
 class Contact(models.Model):
@@ -10,6 +10,7 @@ class Contact(models.Model):
     date = models.DateField()
     def __str__(self):
        return self.name
+   
     
 
 
@@ -20,3 +21,29 @@ class BlogPost(models.Model):
 
     def __str__(self):
         return self.title
+  
+
+class Pet(models.Model):
+    name = models.CharField(max_length=100)
+    breed = models.CharField(max_length=100)
+    age = models.IntegerField()
+    description = models.TextField()
+    image = models.ImageField(upload_to='pets/', null=True, blank=True)
+    is_adopted = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.name
+    
+
+
+# for login
+
+
+# models.py in hello app
+# hello/models.py
+
+# hello/models.py
+
+
+# hello/models.py
+

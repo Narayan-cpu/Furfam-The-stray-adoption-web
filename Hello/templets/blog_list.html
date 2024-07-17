@@ -12,7 +12,7 @@ body {
 }
 
 .container {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 50px auto;
     background-color: #fff;
     padding: 20px;
@@ -55,13 +55,13 @@ ul {
     </style>
 
     <div class="container">
-        <h1>Blog List</h1>
+        <h1 style="font-family: cursive;">Blog List</h1>
         <ul class="blog-list">
             {% for post in blog_posts %}
                 <li class="blog-post">
-                    <h2>{{ post.title }}</h2>
-                    <p>{{ post.content }}</p>
-                    <p class="author">By: {{ post.author_name }}</p>
+                    <h2 style="font-family: cursive;">{{ post.title }}</h2>
+                    <p style="font-family: cursive;"> {{ post.content }}</p>
+                    <p class="author" style="font-family: cursive;">By: {{ post.author_name }}</p>
                 </li>
             {% endfor %}
         </ul>

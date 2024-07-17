@@ -1,0 +1,96 @@
+<!-- adopt_list.html -->
+{% extends "base.html" %}
+{% block title %}Adopt a Pet{% endblock %}
+{% block body %}
+<style>
+    .container {
+        max-width: 1200px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        font-family: 'Arial', sans-serif;
+    }
+
+    h1 {
+        font-family: 'Cursive', sans-serif;
+        text-align: center;
+        color: #333;
+        margin-bottom: 30px;
+    }
+
+    .pet-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .pet {
+        width: 250px;
+        padding: 15px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.2s;
+    }
+
+    .pet img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    .pet h2 {
+        font-size: 24px;
+        color: #4CAF50;
+        font-family: 'Cursive', sans-serif;
+    }
+
+    .pet p {
+        font-size: 16px;
+        color: #555;
+    }
+
+    .pet a {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 8px 16px;
+        background-color: #4CAF50;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+    }
+
+    .pet a:hover {
+        background-color: #45a049;
+    }
+
+    .pet:hover {
+        transform: scale(1.05);
+    }
+</style>
+
+<div class="container">
+    <h1 style="font-family: cursive;">Available Pets for Adoption</h1>
+    <div class="pet-list">
+        {% for pet in pets %}
+        <div class="pet">
+            {% if pet.image %}
+                <img src="{{ pet.image.url }}" alt="{{ pet.name }}">
+            {% else %}
+                <img src="path/to/default/image.jpg" alt="No image available">
+            {% endif %}
+            <h2 style="font-family: cursive;">{{ pet.name }}</h2>
+            <p style="font-family: cursive;">Breed: {{ pet.breed }}</p>
+            <p style="font-family: cursive;">Age: {{ pet.age }} years</p>
+            <a style="font-family: cursive;" href="{% url 'adopt_detail' pet.id %}">View Details</a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
