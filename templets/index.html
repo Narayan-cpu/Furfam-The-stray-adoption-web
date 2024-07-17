@@ -1,0 +1,127 @@
+{% extends "base.html" %}
+{% block title %}index{% endblock title %}
+{% block body %}
+<body>
+  <style>
+    .fixed-section {
+        height: 100vh;
+        overflow: hidden;
+        background-color: #ffffff;
+    }
+    .scrolling-section {
+        height: 100vh;
+        overflow-y: scroll;
+        background-color: #ffffff;
+    }
+</style>
+        <div id="carouselExampleCaptions" class="carousel slide">
+            <div class=" z-0 position-absolute p-5 rounded-3">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+             
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="../static/pexels-sandipan-ghosh-68417-733555.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 style="font-family: Arial, Helvetica, sans-serif;">Anatole France~~</h5>
+                  <p style="font-family: Arial, Helvetica, sans-serif;">Until one has loved an animal, a part of one's soul remains unawakened.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="../static/mohan-vamsi-somireddi-aKlmxNlfjcY-unsplash.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="text-secondary-emphasis" style="font-family: Arial, Helvetica, sans-serif;"> Gerald Durrell~~</h5>
+                  <p class="text-secondary-emphasis" style="font-family: Arial, Helvetica, sans-serif;">A house is not a home until it has a dog.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="../static/novi-raj-Ex83Cq5TRAI-unsplash.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5  style="font-family: Arial, Helvetica, sans-serif;"> Orhan~~</h5>
+                  <p  style="font-family: Arial, Helvetica, sans-serif;">Dogs do speak, but only to those who know how to listen.</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <hr class="m-4 p-1" >
+        <section class="intro">
+          <div><h3 class="text-center pt-5 hover-shadow" style="font-family: cursive;">Introduction to FurFam</h3>
+
+          <p class="p-2 m-3 mt-5" style="font-family: cursive;">  Welcome to FurFam, your go-to platform for adopting stray pets and giving them the loving homes they deserve. At FurFam, our mission is to bridge the gap between stray pets in need of care and compassionate individuals or families ready to adopt them. We believe that every stray pet has a unique story and a second chance at a happy life. <br>
+            
+            Our platform makes it easy for adopters to find the perfect furry companion by offering a user-friendly interface, detailed pet profiles, and advanced search filters. For pet rescuers, FurFam provides a streamlined process to list pets for adoption, ensuring they reach a wider audience of potential adopters. <br>
+            
+            Join us in our mission to reduce the number of stray pets and create a community of responsible pet owners. Whether you're looking to adopt or help stray animals find homes, FurFam is here to support you every step of the way. Together, we can make a difference, one pet at a time.</p>
+       </div> </section>
+       <hr class="m-4 p-3" >
+       <section class="p-2 scroll-con ">
+        <div class="container-fluid h-100 ">
+          <div class="row h-100">
+              <div class="col-md-6 fixed-section">
+                <style>
+                  .container{
+                    margin-top: 3;
+                    align-items: center;
+                  }
+        .shadow-img-container {
+            position: relative;
+            overflow: hidden;
+        }
+        .shadow-img-container img {
+            transition: transform 0.3s ease;
+            display: block;
+        }
+        .shadow-img-container:hover img {
+            transform: scale(1.1); /* Optional: Adjust scale for a slight zoom effect */
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Adjust shadow properties */
+        }
+        
+        .centered-div {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+    
+    </style>
+                  <h2 class="text-center" style="font-family: cursive;">FurFam : Adopt <span style="color: plum;">Love</span>,Save <span style="color: plum;">Lives</span> </h2>
+                
+                  <div class="align-center container p-3 ">
+                    <div class="row">
+                        <div class="col-md-7">
+                            <div class="shadow-img-container">  <div class="centered-div">
+                                <img src="../static/Screenshot 2024-07-06 232532.png" width="300px" height="300px" class="img-fluid" alt="Image with Shadow Effect">
+                              </div></div>
+                        </div>
+                    </div>
+              </div> 
+<pre><h4 style="font-family: cursive;">
+         Where Stray Pets Find Loving   <Span style="color:#dda0dd;"> 
+                     Homes and Families</Span>
+                                       Find Furry Friends</h4></pre>
+
+   </div>
+ 
+              <div class="col-md-6 scrolling-section">
+                  <h2 class="text-center" style="font-family: cursive;">About Us</h2>
+                  <p style="font-family: cursive;">
+                    Furfam serves a vital purpose in the world of pet adoption by bridging the gap between homeless animals and caring individuals seeking companionship. The website provides a centralized platform where prospective pet owners can browse profiles of various animals, specifically focusing on stray dogs in need of homes. By showcasing each dog's personality, background, and needs, Furfam empowers users to make informed decisions about adoption, ensuring that the match between pet and owner is harmonious and fulfilling for both parties. Beyond facilitating adoptions, Furfam also educates the public about responsible pet ownership and advocates for the humane treatment of animals, fostering a community dedicated to improving the lives of pets in need.</p>
+                  <p style="color: rgb(122, 43, 122);" style="font-family: cursive;">In essence, Furfam not only connects people with their future pets but also cultivates a compassionate network that supports and promotes the well-being of stray dogs, ultimately aiming to reduce the population of homeless animals and provide loving forever homes for those in shelters or on the streets.</p>
+                  <p style="font-family: cursive;">
+                    Furfam operates with the mission of transforming the lives of stray dogs by facilitating their adoption into loving homes. The website serves as a comprehensive platform where users can browse detailed profiles of stray dogs rescued from various situations such as shelters, streets, or neglectful environments. Each dog's profile on Furfam typically includes information about their age, breed (if known), temperament, health status, and any specific needs they may have. This detailed information enables potential adopters to make well-informed decisions that align with their lifestyles and capabilities to provide care.</p>
+                  <p style="font-family: cursive;">Furthermore, Furfam plays a crucial role in promoting responsible pet ownership. The website educates users about the responsibilities involved in caring for a dog, including the financial commitment, time investment for training and exercise, and the emotional support needed throughout the pet's life. By emphasizing these aspects, Furfam aims to ensure that each adoption is not just a transaction but a lifelong commitment to the well-being and happiness of the adopted dog.</p>
+                  <p style="color: rgb(122, 43, 122);" style="font-family: cursive;">Beyond adoption services, Furfam often collaborates with local animal shelters, rescue organizations, and veterinary clinics to provide additional resources and support for pet owners. This collaborative approach helps in addressing broader issues such as stray animal overpopulation, promoting spaying and neutering programs, and advocating for animal welfare laws. In essence, Furfam strives to create a compassionate community where every stray dog has the opportunity to find a forever home filled with love, care, and understanding.</p>
+              </div>
+          </div>
+      </div>
+       </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+   </body> {% endblock body %}
