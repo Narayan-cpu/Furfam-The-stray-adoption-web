@@ -102,9 +102,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 For any questions or feedback, please contact us at:
 
 - **Email:naiknarayanp557@gmail.com
-- **GitHub Issues:** [https://github.com/yourusername/furfam/issues](https://github.com/yourusername/furfam/issues)
-
----
+- **GitHub Issues:** 
 
 Thank you for visiting FurFam! Together, we can make a difference in the lives of stray animals.
 
