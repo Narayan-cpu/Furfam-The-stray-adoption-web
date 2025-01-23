@@ -1,0 +1,188 @@
+{% extends "base.html" %}
+{% block title %}Add Blog{% endblock title %}
+{% block body %}<body>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #555;
+        }
+
+        input[type="text"],
+        textarea {
+            width: calc(100% - 24px); /* Adjust width for better appearance */
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        .btn-submit {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px; /* Add margin for spacing */
+        }
+
+        .btn-submit:hover {
+            background-color: #45a049;
+        }
+
+        /* Additional styles for better aesthetics */
+        input[type="text"]:focus,
+        textarea:focus {
+            border-color: #4CAF50;
+            outline: none;
+        }
+
+        .form-group.error input[type="text"],
+        .form-group.error textarea {
+            border-color: #ff0000;
+        }
+
+        .form-group.error label {
+            color: #ff0000;
+        }
+
+        .error-message {
+            color: #ff0000;
+            font-size: 14px;
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const blogForm = document.getElementById('blogForm');
+
+            blogForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                // Basic client-side validation
+                let isValid = true;
+                const titleField = document.getElementById('id_title');
+                const contentField = document.getElementById('id_content');
+                const authorField = document.getElementById('id_author_name');
+
+                if (titleField.value.trim() === '') {
+                    isValid = false;
+                    showError(titleField, 'Title is required');
+                } else {
+                    removeError(titleField);
+                }
+
+                if (contentField.value.trim() === '') {
+                    isValid = false;
+                    showError(contentField, 'Content is required');
+                } else {
+                    removeError(contentField);
+                }
+
+                if (authorField.value.trim() === '') {
+                    isValid = false;
+                    showError(authorField, 'Your name is required');
+                } else {
+                    removeError(authorField);
+                }
+
+                if (!isValid) {
+                    return;
+                }
+
+                // Submit the form data (example using fetch API)
+                fetch(blogForm.action, {
+                    method: 'POST',
+                    body: new FormData(blogForm),
+                })
+                .then(response => {
+                    if (response.ok) {
+                        alert('Blog post submitted successfully!');
+                        blogForm.reset(); // Reset form after successful submission
+                    } else {
+                        alert('Failed to submit blog post.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('An error occurred while submitting the blog post.');
+                });
+            });
+
+            function showError(field, message) {
+                const formGroup = field.closest('.form-group');
+                formGroup.classList.add('error');
+                let errorMessage = formGroup.querySelector('.error-message');
+                if (!errorMessage) {
+                    errorMessage = document.createElement('div');
+                    errorMessage.className = 'error-message';
+                    formGroup.appendChild(errorMessage);
+                }
+                errorMessage.textContent = message;
+            }
+
+            function removeError(field) {
+                const formGroup = field.closest('.form-group');
+                formGroup.classList.remove('error');
+                const errorMessage = formGroup.querySelector('.error-message');
+                if (errorMessage) {
+                    errorMessage.remove();
+                }
+            }
+        });
+    </script>
+
+    <div class="container">
+        <h1>Add Blog Post</h1>
+        <form id="blogForm" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="id_title">Title:</label>
+                {{ form.title }}
+            </div>
+            <div class="form-group">
+                <label for="id_content">Content:</label>
+                {{ form.content }}
+            </div>
+            <div class="form-group">
+                <label for="id_author_name">Your Name:</label>
+                {{ form.author_name }}
+            </div>
+            <button type="submit" class="btn-submit">Submit</button>
+        </form>
+    </div>
+</body>
+{% endblock body %}

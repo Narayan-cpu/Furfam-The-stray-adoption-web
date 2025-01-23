@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% extends "base.html" %}
 {% block title %}Contact{% endblock title %}
 
@@ -29,4 +30,37 @@
       </div>
       <button type="Submit" class="btn btn-primary align-self-center">Submit</button></form>
     </div></div>
+=======
+{% extends "base.html" %}
+{% block title %}Contact{% endblock title %}
+
+{% block body %}
+
+<div class="container-fluid mx-0 ">
+<img class="z-0" src="/static/img-c.jpeg" alt="pic"  />
+</div>
+<div class="container  p-2 mb-2">
+<h2 class=" text-center p-2">Contact us</h3>
+  <div class="border border-2 p-2 rounded">
+    <form method="POST" action="">
+      {% csrf_token %}
+    <div class="mb-3">
+        <label for="name" class="form-label">Enter your name</label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+      </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="email"  name="email" placeholder="Enter your Email">
+      </div>
+      <div class="mb-3">
+        <label for="phone" class="form-label">Phone number</label>
+        <input type="phone" class="form-control" id="phone"  name="phone" placeholder="Enter your Ph.no">
+      </div>
+      <div class="mb-3">
+        <label for="desc" class="form-label">Text area</label>
+        <textarea class="form-control" id="desc" name="desc" rows="3"></textarea>
+      </div>
+      <button type="Submit" class="btn btn-primary align-self-center">Submit</button></form>
+    </div></div>
+>>>>>>> 88c2577a0f202bf1f43ee1d32770d3c1962c9df4
 {% endblock body %}
