@@ -1,0 +1,135 @@
+{% extends "base.html" %}
+{% block title %}helpline{% endblock title %}
+{% block body %}
+<body>
+                 <section class="base-cl">
+  <style>
+    /* styles.css */
+
+body {
+  background-color: rgb(187, 231, 179);
+    font-family: Arial, sans-serif;
+}
+
+#helpline-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.controls {
+    margin-bottom: 20px;
+}
+
+#city-select, #search-bar {
+    padding: 10px;
+    margin: 5px;
+    width: 200px;
+}
+
+.helpline-card {
+    background-color: #f4f4f4;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.helpline-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.helpline-card h3 {
+    margin: 0;
+}
+
+.helpline-details {
+    display: none;
+    margin-top: 10px;
+}
+
+.helpline-card.active .helpline-details {
+    display: block;
+}
+
+  </style>
+    <section id="helpline-section">
+        <h2 style="font-family: cursive;">Helpline Numbers</h2>
+        <div class="controls">
+            <select  id="city-select">
+                <option style="font-family: cursive;" value="">Select a city</option>
+                <option style="font-family: cursive;" value="Mumbai">Mumbai</option>
+                <option style="font-family: cursive;" value="Delhi">Delhi</option>
+                <option style="font-family: cursive;" value="Bangalore">Bangalore</option>
+              
+            </select>
+            <input type="text" id="search-bar" placeholder="Search helpline...">
+        </div>
+        <div style="font-family: cursive;" id="helpline-list">
+           
+        </div>
+<script>
+  // scripts.js
+
+document.addEventListener('DOMContentLoaded', () => {
+    const helplines = {
+        Mumbai: [
+            { name: 'Mumbai Animal Care', number: '022-12345678', details: '24/7 service' },
+            { name: 'Pet Rescue Mumbai', number: '022-87654321', details: 'Open 9 AM - 9 PM' }
+        ],
+        Delhi: [
+            { name: 'Delhi Pet Helpline', number: '011-12345678', details: '24/7 service' },
+            { name: 'Animal Aid Delhi', number: '011-87654321', details: 'Open 10 AM - 8 PM' }
+        ],
+        Bangalore: [
+            { name: 'Bangalore Animal Rescue', number: '080-12345678', details: '24/7 service' },
+            { name: 'Pet Helpline Bangalore', number: '080-87654321', details: 'Open 8 AM - 10 PM' }
+        ]
+    };
+
+    const citySelect = document.getElementById('city-select');
+    const searchBar = document.getElementById('search-bar');
+    const helplineList = document.getElementById('helpline-list');
+
+    citySelect.addEventListener('change', () => {
+        displayHelplines(citySelect.value);
+    });
+
+    searchBar.addEventListener('input', () => {
+        displayHelplines(citySelect.value, searchBar.value.toLowerCase());
+    });
+
+    function displayHelplines(city, search = '') {
+        helplineList.innerHTML = '';
+        if (city && helplines[city]) {
+            helplines[city].forEach(helpline => {
+                if (helpline.name.toLowerCase().includes(search) || helpline.number.includes(search)) {
+                    const helplineCard = document.createElement('div');
+                    helplineCard.classList.add('helpline-card');
+                    helplineCard.innerHTML = `
+                        <h3>${helpline.name}</h3>
+                        <p>${helpline.number}</p>
+                        <button class="toggle-details">Show Details</button>
+                        <div class="helpline-details">${helpline.details}</div>
+                    `;
+                    helplineCard.querySelector('.toggle-details').addEventListener('click', () => {
+                        helplineCard.classList.toggle('active');
+                    });
+                    helplineList.appendChild(helplineCard);
+                }
+            });
+        }
+    }
+});
+
+</script>
+    </section>
+    <img src="../static/ricardo-iv-tamayo-9opwOx9OrGI-unsplash.jpg" height="300px" class="img-fluid" alt="...">
+
+          
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+{% endblock body %}
