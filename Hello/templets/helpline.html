@@ -60,10 +60,48 @@ body {
         <h2 style="font-family: cursive;">Helpline Numbers</h2>
         <div class="controls">
             <select  id="city-select">
-                <option style="font-family: cursive;" value="">Select a city</option>
-                <option style="font-family: cursive;" value="Mumbai">Mumbai</option>
-                <option style="font-family: cursive;" value="Delhi">Delhi</option>
-                <option style="font-family: cursive;" value="Bangalore">Bangalore</option>
+                <option style="font-family: cursive;" value="">Select a city</option>  
+    <option style="font-family: cursive;" value="Mumbai">Mumbai</option>  
+    <option style="font-family: cursive;" value="Delhi">Delhi</option>  
+    <option style="font-family: cursive;" value="Bangalore">Bangalore</option>  
+    <option style="font-family: cursive;" value="Kolkata">Kolkata</option>  
+    <option style="font-family: cursive;" value="Chennai">Chennai</option>  
+    <option style="font-family: cursive;" value="Hyderabad">Hyderabad</option>  
+    <option style="font-family: cursive;" value="Pune">Pune</option>  
+    <option style="font-family: cursive;" value="Ahmedabad">Ahmedabad</option>  
+    <option style="font-family: cursive;" value="Chandigarh">Chandigarh</option>  
+    <option style="font-family: cursive;" value="Jaipur">Jaipur</option>  
+    <option style="font-family: cursive;" value="Surat">Surat</option>  
+    <option style="font-family: cursive;" value="Nagpur">Nagpur</option>  
+    <option style="font-family: cursive;" value="Lucknow">Lucknow</option>  
+    <option style="font-family: cursive;" value="Visakhapatnam">Visakhapatnam</option>  
+    <option style="font-family: cursive;" value="Bhopal">Bhopal</option>  
+    <option style="font-family: cursive;" value="Vadodara">Vadodara</option>  
+    <option style="font-family: cursive;" value="Coimbatore">Coimbatore</option>  
+    <option style="font-family: cursive;" value="Indore">Indore</option>  
+    <option style="font-family: cursive;" value="Thane">Thane</option>  
+    <option style="font-family: cursive;" value="Nashik">Nashik</option>  
+    <option style="font-family: cursive;" value="Aurangabad">Aurangabad</option>  
+    <option style="font-family: cursive;" value="Amritsar">Amritsar</option>  
+    <option style="font-family: cursive;" value="Patna">Patna</option>  
+    <option style="font-family: cursive;" value="Raipur">Raipur</option>  
+    <option style="font-family: cursive;" value="Ranchi">Ranchi</option>  
+    <option style="font-family: cursive;" value="Dehradun">Dehradun</option>  
+    <option style="font-family: cursive;" value="Nanded">Nanded</option>  
+    <option style="font-family: cursive;" value="Gwalior">Gwalior</option>  
+    <option style="font-family: cursive;" value="Jodhpur">Jodhpur</option>  
+    <option style="font-family: cursive;" value="Suratgarh">Suratgarh</option>  
+    <option style="font-family: cursive;" value="Siliguri">Siliguri</option>  
+    <option style="font-family: cursive;" value="Udaipur">Udaipur</option>  
+    <option style="font-family: cursive;" value="Salem">Salem</option>  
+    <option style="font-family: cursive;" value="Kollam">Kollam</option>  
+    <option style="font-family: cursive;" value="Bhubaneswar">Bhubaneswar</option>  
+    <option style="font-family: cursive;" value="Mangalore">Mangalore</option>  
+    <option style="font-family: cursive;" value="Thiruvananthapuram">Thiruvananthapuram</option>  
+    <option style="font-family: cursive;" value="Kozhikode">Kozhikode</option>  
+    <option style="font-family: cursive;" value="Tirupur">Tirupur</option>  
+    <option style="font-family: cursive;" value="Akola">Akola</option>  
+    <option style="font-family: cursive;" value="Bhavnagar">Bhavnagar</option>  
                 <!-- Add more cities as needed -->
             </select>
             <input type="text" id="search-bar" placeholder="Search helpline...">
@@ -75,20 +113,172 @@ body {
   // scripts.js
 
 document.addEventListener('DOMContentLoaded', () => {
-    const helplines = {
-        Mumbai: [
-            { name: 'Mumbai Animal Care', number: '022-12345678', details: '24/7 service' },
-            { name: 'Pet Rescue Mumbai', number: '022-87654321', details: 'Open 9 AM - 9 PM' }
-        ],
-        Delhi: [
-            { name: 'Delhi Pet Helpline', number: '011-12345678', details: '24/7 service' },
-            { name: 'Animal Aid Delhi', number: '011-87654321', details: 'Open 10 AM - 8 PM' }
-        ],
-        Bangalore: [
-            { name: 'Bangalore Animal Rescue', number: '080-12345678', details: '24/7 service' },
-            { name: 'Pet Helpline Bangalore', number: '080-87654321', details: 'Open 8 AM - 10 PM' }
-        ]
-    };
+    const helplines = {  
+    Mumbai: [  
+        { name: 'Mumbai Animal Care', number: '022-12345678', details: '24/7 service' },  
+        { name: 'Pet Rescue Mumbai', number: '022-87654321', details: 'Open 9 AM - 9 PM' }  
+    ],  
+    Delhi: [  
+        { name: 'Delhi Pet Helpline', number: '011-12345678', details: '24/7 service' },  
+        { name: 'Animal Aid Delhi', number: '011-87654321', details: 'Open 10 AM - 8 PM' }  
+    ],  
+    Bangalore: [  
+        { name: 'Bangalore Animal Rescue', number: '080-12345678', details: '24/7 service' },  
+        { name: 'Pet Helpline Bangalore', number: '080-87654321', details: 'Open 8 AM - 10 PM' }  
+    ],  
+    Kolkata: [  
+        { name: 'Calcutta Animal Welfare', number: '033-12345678', details: '24/7 service' },  
+        { name: 'Kolkata Pet Rescue', number: '033-87654321', details: 'Open 9 AM - 9 PM' }  
+    ],  
+    Chennai: [  
+        { name: 'Chennai Animal Control', number: '044-12345678', details: '24/7 service' },  
+        { name: 'Pet Rescue Chennai', number: '044-87654321', details: 'Open 10 AM - 8 PM' }  
+    ],  
+    Hyderabad: [  
+        { name: 'Hyderabad Animal Helpline', number: '040-12345678', details: '24/7 service' },  
+        { name: 'Pet Care Hyderabad', number: '040-87654321', details: 'Open 9 AM - 9 PM' }  
+    ],  
+    Pune: [  
+        { name: 'Pune Animal Welfare', number: '020-12345678', details: '24/7 service' },  
+        { name: 'Pune Pet Help', number: '020-87654321', details: 'Open 8 AM - 10 PM' }  
+    ],  
+    Ahmedabad: [  
+        { name: 'Ahmedabad Animal Rescue', number: '079-12345678', details: '24/7 service' },  
+        { name: 'Pet Support Ahmedabad', number: '079-87654321', details: 'Open 9 AM - 9 PM' }  
+    ],  
+    Chandigarh: [  
+        { name: 'Chandigarh Pet Helpline', number: '0172-1234567', details: '24/7 service' },  
+        { name: 'Animal Care Chandigarh', number: '0172-7654321', details: 'Open 10 AM - 7 PM' }  
+    ],  
+    Jaipur: [  
+        { name: 'Jaipur Animal Welfare', number: '0141-1234567', details: '24/7 service' },  
+        { name: 'Pet Rescue Jaipur', number: '0141-7654321', details: 'Open 9 AM - 8 PM' }  
+    ],  
+    Surat: [  
+        { name: 'Surat Animal Help', number: '0261-1234567', details: '24/7 service' },  
+        { name: 'Pet Care Surat', number: '0261-7654321', details: 'Open 9 AM - 9 PM' }  
+    ],  
+    Nagpur: [  
+        { name: 'Nagpur Animal Rescue', number: '0712-1234567', details: '24/7 service' },  
+        { name: 'Pet Helpline Nagpur', number: '0712-7654321', details: 'Open 10 AM - 8 PM' }  
+    ],  
+    Lucknow: [  
+        { name: 'Lucknow Animal Care', number: '0522-1234567', details: '24/7 service' },  
+        { name: 'Pet Friends Lucknow', number: '0522-7654321', details: 'Open 9 AM - 9 PM' }  
+    ],  
+    Visakhapatnam: [  
+        { name: 'Visakhapatnam Animal Welfare', number: '0891-1234567', details: '24/7 service' },  
+        { name: 'Pet Rescue Visakhapatnam', number: '0891-7654321', details: 'Open 9 AM - 8 PM' }  
+    ],  
+    Bhopal: [  
+        { name: 'Bhopal Pet Helpline', number: '0755-1234567', details: '24/7 service' },  
+        { name: 'Animal Welfare Bhopal', number: '0755-7654321', details: 'Open 10 AM - 7 PM' }  
+    ],  
+    Vadodara: [  
+        { name: 'Vadodara Animal Care', number: '0265-1234567', details: '24/7 service' },  
+        { name: 'Pet Support Vadodara', number: '0265-7654321', details: 'Open 9 AM - 8 PM' }  
+    ],  
+    Coimbatore: [  
+        { name: 'Coimbatore Animal Helpline', number: '0422-1234567', details: '24/7 service' },  
+        { name: 'Pet Rescue Coimbatore', number: '0422-7654321', details: 'Open 10 AM - 8 PM' }  
+    ],  
+    Indore: [  
+        { name: 'Indore Animal Welfare', number: '0731-1234567', details: '24/7 service' },  
+        { name: 'Pet Rescue Indore', number: '0731-7654321', details: 'Open 9 AM - 9 PM' }  
+    ],  
+    Thane: [  
+        { name: 'Thane Animal Help', number: '022-12345789', details: '24/7 service' },  
+        { name: 'Pet Friends Thane', number: '022-98765432', details: 'Open 9 AM - 9 PM' }  
+    ],  
+    Nashik: [  
+        { name: 'Nashik Animal Welfare', number: '0253-1234567', details: '24/7 service' },  
+        { name: 'Pet Help Nashik', number: '0253-7654321', details: 'Open 10 AM - 8 PM' }  
+    ],  
+    Aurangabad: [  
+        { name: 'Aurangabad Pet Rescue', number: '0240-1234567', details: '24/7 service' },  
+        { name: 'Aurangabad Animal Care', number: '0240-7654321', details: 'Open 9 AM - 9 PM' }  
+    ],  
+    Amritsar: [  
+        { name: 'Amritsar Animal Welfare', number: '0183-1234567', details: '24/7 service' },  
+        { name: 'Pet Rescue Amritsar', number: '0183-7654321', details: 'Open 9 AM - 7 PM' }  
+    ],  
+    Patna: [  
+        { name: 'Patna Animal Care', number: '0612-1234567', details: '24/7 service' },  
+        { name: 'Pet Help Patna', number: '0612-7654321', details: 'Open 10 AM - 8 PM' }  
+    ],  
+    Raipur: [  
+        { name: 'Raipur Animal Helpline', number: '0771-1234567', details: '24/7 service' },  
+        { name: 'Pet Rescue Raipur', number: '0771-7654321', details: 'Open 9 AM - 9 PM' }  
+    ],  
+    Ranchi: [  
+        { name: 'Ranchi Animal Welfare', number: '0651-1234567', details: '24/7 service' },  
+        { name: 'Pet Support Ranchi', number: '0651-7654321', details: 'Open 8 AM - 8 PM' }  
+    ],  
+    Dehradun: [  
+        { name: 'Dehradun Animal Rescue', number: '0135-1234567', details: '24/7 service' },  
+        { name: 'Pet Care Dehradun', number: '0135-7654321', details: 'Open 9 AM - 9 PM' }  
+    ],  
+    Nanded: [  
+        { name: 'Nanded Animal Help', number: '02462-123456', details: '24/7 service' },  
+        { name: 'Pet Rescue Nanded', number: '02462-765432', details: 'Open 10 AM - 8 PM' }  
+    ],  
+    Gwalior: [  
+        { name: 'Gwalior Animal Welfare', number: '0751-1234567', details: '24/7 service' },  
+        { name: 'Gwalior Pet Rescue', number: '0751-7654321', details: 'Open 9 AM - 7 PM' }  
+    ],  
+    Jodhpur: [  
+        { name: 'Jodhpur Animal Helpline', number: '0291-1234567', details: '24/7 service' },  
+        { name: 'Pet Rescue Jodhpur', number: '0291-7654321', details: 'Open 8 AM - 8 PM' }  
+    ],  
+    Suratgarh: [  
+        { name: 'Suratgarh Animal Welfare', number: '01509-123456', details: '24/7 service' },  
+        { name: 'Pet Help Suratgarh', number: '01509-765432', details: 'Open 10 AM - 7 PM' }  
+    ],  
+    Siliguri: [  
+        { name: 'Siliguri Animal Rescue', number: '0353-1234567', details: '24/7 service' },  
+        { name: 'Pet Help Siliguri', number: '0353-7654321', details: 'Open 9 AM - 8 PM' }  
+    ],  
+    Udaipur: [  
+        { name: 'Udaipur Animal Helpline', number: '0294-1234567', details: '24/7 service' },  
+        { name: 'Pet Rescue Udaipur', number: '0294-7654321', details: 'Open 10 AM - 9 PM' }  
+    ],  
+    Salem: [  
+        { name: 'Salem Animal Welfare', number: '0427-1234567', details: '24/7 service' },  
+        { name: 'Pet Support Salem', number: '0427-7654321', details: 'Open 9 AM - 9 PM' }  
+    ],  
+    Kollam: [  
+        { name: 'Kollam Animal Help', number: '0474-1234567', details: '24/7 service' },  
+        { name: 'Pet Care Kollam', number: '0474-7654321', details: 'Open 10 AM - 7 PM' }  
+    ],  
+    Bhubaneswar: [  
+        { name: 'Bhubaneswar Animal Welfare', number: '0674-1234567', details: '24/7 service' },  
+        { name: 'Pet Help Bhubaneswar', number: '0674-7654321', details: 'Open 9 AM - 8 PM' }  
+    ],  
+    Mangalore: [  
+        { name: 'Mangalore Animal Rescue', number: '0824-1234567', details: '24/7 service' },  
+        { name: 'Mangalore Pet Helpline', number: '0824-7654321', details: 'Open 10 AM - 9 PM' }  
+    ],  
+    Thiruvananthapuram: [  
+        { name: 'Thiruvananthapuram Animal Help', number: '0471-1234567', details: '24/7 service' },  
+        { name: 'Pet Care Thiruvananthapuram', number: '0471-7654321', details: 'Open 9 AM - 9 PM' }  
+    ],  
+    Kozhikode: [  
+        { name: 'Kozhikode Animal Welfare', number: '0495-1234567', details: '24/7 service' },  
+        { name: 'Kozhikode Pet Helpline', number: '0495-7654321', details: 'Open 10 AM - 8 PM' }  
+    ],  
+    Tirupur: [  
+        { name: 'Tirupur Animal Help', number: '0421-1234567', details: '24/7 service' },  
+        { name: 'Pet Support Tirupur', number: '0421-7654321', details: 'Open 9 AM - 9 PM' }  
+    ],  
+    Akola: [  
+        { name: 'Akola Animal Rescue', number: '0721-1234567', details: '24/7 service' },  
+        { name: 'Akola Pet Helpline', number: '0721-7654321', details: 'Open 10 AM - 8 PM' }  
+    ],  
+    Bhavnagar: [  
+        { name: 'Bhavnagar Animal Welfare', number: '0278-1234567', details: '24/7 service' },  
+        { name: 'Pet Rescue Bhavnagar', number: '0278-7654321', details: 'Open 9 AM - 9 PM' }  
+    ]  
+};
 
     const citySelect = document.getElementById('city-select');
     const searchBar = document.getElementById('search-bar');
