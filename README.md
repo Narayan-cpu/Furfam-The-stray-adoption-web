@@ -29,7 +29,7 @@ To set up the FurFam website locally, follow these steps:
 
 1. **Clone the repository:**
     ```bash
-    git clone https://github.com/yourusername/furfam.git
+    git clone https://github.com/Narayan-cpu/Furfam-The-stray-adoption-web.git
     cd furfam
     ```
 
