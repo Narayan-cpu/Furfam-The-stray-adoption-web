@@ -71,7 +71,7 @@ We welcome contributions to FurFam! To contribute:
 
 2. **Clone your fork:**
     ```bash
-    git clone https://github.com/yourusername/furfam.git
+    git clone https://github.com/Narayan-cpu/Furfam-The-stray-adoption-web.git
     cd furfam
     ```
 
