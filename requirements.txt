@@ -1,5 +1,5 @@
 asgiref==3.8.1
-Django==5.0.4
+Django>=5.0.4
 django-admin-honeypot==1.1.0
 django-allauth==0.63.6
 gunicorn==23.0.0
